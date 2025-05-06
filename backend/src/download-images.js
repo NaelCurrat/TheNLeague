@@ -40,14 +40,12 @@ const baseDir = path.join(__dirname, '../../../src/assets/images');
   const dirPath = path.join(baseDir, dir);
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
-    console.log(`Created directory: ${dirPath}`);
   }
 });
 
 // Fonction pour télécharger une image
 function downloadImage(url, filepath) {
   return new Promise((resolve, reject) => {
-    console.log(`Downloading ${url} to ${filepath}...`);
     
     const file = fs.createWriteStream(filepath);
     https.get(url, (response) => {
@@ -60,7 +58,6 @@ function downloadImage(url, filepath) {
 
       file.on('finish', () => {
         file.close();
-        console.log(`Successfully downloaded: ${filepath}`);
         resolve();
       });
 
@@ -87,12 +84,9 @@ async function downloadAllImages() {
       try {
         await downloadImage(url, filepath);
       } catch (error) {
-        console.error(`Error downloading ${url}:`, error.message);
       }
     }
   }
-  
-  console.log('\nAll downloads completed!');
 }
 
 downloadAllImages().catch(error => {
