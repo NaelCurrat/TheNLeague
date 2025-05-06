@@ -1,0 +1,346 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-content {
+  --background: #0a0a2a;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+.champions-background {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #0a0a2a;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px 0;
+}
+
+.trophy-icon {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.7));
+}
+
+.table-container {
+  padding: 20px;
+  margin: 0 40px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: calc(100% - 80px);
+  margin-top: 160px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-top: 160px;
+}
+
+thead {
+  background: linear-gradient(90deg, #0a0a2a 0%, #1a1a4a 100%);
+  color: white;
+}
+
+th {
+  padding: 20px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ffd700;
+}
+
+td {
+  padding: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.team-logo, .country-flag, .championship-logo {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  padding: 8px;
+}
+
+.team-logo:hover, .country-flag:hover, .championship-logo:hover {
+  transform: scale(1.1);
+}
+
+.championship-logo {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.country-flag {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-logo {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.background-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+ion-toolbar {
+  --background: transparent;
+  --color: white;
+  --min-height: 120px;
+  padding: 20px 0;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  background: #0a0a2a;
+}
+
+ion-title {
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 42px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .table-container {
+    padding: 10px;
+    margin-top: 140px;
+  }
+  
+  th, td {
+    padding: 15px;
+  }
+
+  .trophy-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  ion-title {
+    font-size: 32px;
+
+    ion-icon {
+      font-size: 60px;
+    }
+  }
+
+  .background-image {
+    max-width: 95%;
+  }
+
+  .team-logo, .country-flag, .championship-logo {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin: 30px auto;
+  padding: 0 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.action-button {
+  --background: rgba(10, 10, 42, 0.8);
+  --background-hover: rgba(26, 26, 74, 0.9);
+  --background-activated: rgba(42, 42, 106, 0.95);
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 45px;
+  margin: 0;
+
+  ion-icon {
+    margin-right: 8px;
+    font-size: 40px;
+  }
+
+  &.add {
+    --background: rgba(0, 100, 0, 0.8);
+    --background-hover: rgba(0, 128, 0, 0.9);
+    --background-activated: rgba(0, 160, 0, 0.95);
+  }
+
+  &.edit {
+    --background: rgba(255, 215, 0, 0.8);
+    --background-hover: rgba(255, 165, 0, 0.9);
+    --background-activated: rgba(255, 140, 0, 0.95);
+    --color: #0a0a2a;
+  }
+
+  &.delete {
+    --background: rgba(139, 0, 0, 0.8);
+    --background-hover: rgba(160, 0, 0, 0.9);
+    --background-activated: rgba(192, 0, 0, 0.95);
+  }
+}
+
+@media (max-width: 600px) {
+  ion-title {
+    font-size: 32px;
+
+    ion-icon {
+      font-size: 36px;
+    }
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.championship-cell, .country-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.championship-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.country-flag {
+  width: 125px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.team-logo-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-message {
+  text-align: center;
+  padding: 2rem;
+  color: var(--ion-color-light);
+
+  .loading, .error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    ion-spinner {
+      width: 24px;
+      height: 24px;
+    }
+
+    ion-icon {
+      font-size: 24px;
+    }
+  }
+
+  .error {
+    color: var(--ion-color-danger);
+  }
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.champions-league-logo {
+  height: 60px;
+  width: auto;
+}

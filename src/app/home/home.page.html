@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="title-container">
+        <img src="https://www.pngplay.com/wp-content/uploads/13/UEFA-Champions-League-Transparent-File.png" alt="UEFA Champions League" class="champions-league-logo">
+        Équipes Qualifiées
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <table>
+      <thead>
+        <tr>
+          <th>Logo</th>
+          <th>Nom</th>
+          <th>Championnat</th>
+          <th>Drapeau</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let team of teams">
+          <td>
+            <img [src]="team.logo.href" [alt]="team.name" class="team-logo">
+          </td>
+          <td>{{ team.name }}</td>
+          <td>
+            <img [src]="team.championship.href" [alt]="team.name + ' championship'" class="championship-logo">
+          </td>
+          <td>
+            <img [src]="team.countryFlag.href" [alt]="team.name + ' flag'" class="country-flag">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="action-buttons">
+      <ion-button class="action-button add">
+        <ion-icon name="add"></ion-icon>
+        Ajouter une équipe
+      </ion-button>
+      <ion-button class="action-button edit">
+        <ion-icon name="create"></ion-icon>
+        Modifier
+      </ion-button>
+      <ion-button class="action-button delete">
+        <ion-icon name="trash"></ion-icon>
+        Supprimer
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

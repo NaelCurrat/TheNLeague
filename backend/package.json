@@ -1,0 +1,24 @@
+{
+  "name": "nleague-backend",
+  "version": "1.0.0",
+  "description": "Backend for NLeague application",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.0.0",
+    "@fastify/static": "^6.0.0",
+    "fastify": "^4.0.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "@types/sqlite3": "^3.1.11",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  }
+}

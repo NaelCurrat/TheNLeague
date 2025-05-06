@@ -1,0 +1,41 @@
+ion-content {
+  --background: var(--ion-color-dark);
+}
+
+ion-toolbar {
+  --background: var(--ion-color-primary);
+  --color: white;
+}
+
+ion-list {
+  background: transparent;
+  padding: 16px;
+}
+
+ion-item {
+  --background: rgba(255, 255, 255, 0.1);
+  --border-radius: 8px;
+  margin-bottom: 16px;
+  --color: white;
+  --highlight-color: var(--ion-color-primary);
+}
+
+ion-label {
+  color: var(--ion-color-light);
+}
+
+ion-input {
+  --color: white;
+  --placeholder-color: rgba(255, 255, 255, 0.5);
+}
+
+ion-button {
+  --background: var(--ion-color-primary);
+  --background-hover: var(--ion-color-primary-shade);
+  --color: white;
+  margin-top: 24px;
+}
+
+ion-button[disabled] {
+  --background: rgba(var(--ion-color-primary-rgb), 0.5);
+} 

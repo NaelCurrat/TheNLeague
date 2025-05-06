@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Détails de l'équipe</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">Fermer</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="team-details" *ngIf="team">
+    <ion-thumbnail class="team-logo">
+      <img [src]="team.logo" [alt]="team.name + ' logo'">
+    </ion-thumbnail>
+
+    <h2>{{ team.name }}</h2>
+
+    <ion-item>
+      <ion-label>
+        <h3>Championnat</h3>
+        <p>{{ team.championship }}</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <h3>Pays</h3>
+        <ion-thumbnail slot="end">
+          <img [src]="team.countryFlag" [alt]="team.name + ' country flag'">
+        </ion-thumbnail>
+      </ion-label>
+    </ion-item>
+
+    <div class="ion-padding">
+      <ion-button expand="block" (click)="editTeam()">
+        <ion-icon name="create-outline" slot="start"></ion-icon>
+        Modifier
+      </ion-button>
+      <ion-button expand="block" color="danger" (click)="deleteTeam()">
+        <ion-icon name="trash-outline" slot="start"></ion-icon>
+        Supprimer
+      </ion-button>
+    </div>
+  </div>
+</ion-content> 

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ isEditing ? 'Modifier l\'équipe' : 'Ajouter une équipe' }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cancel()">Annuler</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="stacked">Nom de l'équipe</ion-label>
+      <ion-input [(ngModel)]="formData.name" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Logo de l'équipe</ion-label>
+      <ion-input [(ngModel)]="formData.logo" name="logo" type="url" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Championnat</ion-label>
+      <ion-input [(ngModel)]="formData.championship" name="championship" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Drapeau du pays</ion-label>
+      <ion-input [(ngModel)]="formData.countryFlag" name="countryFlag" type="url" required></ion-input>
+    </ion-item>
+
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" [disabled]="!isFormValid()">
+        {{ isEditing ? 'Mettre à jour' : 'Ajouter' }} l'équipe
+      </ion-button>
+    </div>
+  </form>
+</ion-content> 
