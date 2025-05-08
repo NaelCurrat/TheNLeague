@@ -32,7 +32,6 @@ AWS Config : Conformance pack utilisé — Operational-Best-Practices-for-EC2.ya
 5) Mise en place des services de sécurité
   - Lien du repo GitHub à CodeGuru Reviewer pour analyse statique continue
   - Activation d’AWS Config avec un conformance pack pour suivre les meilleures pratiques opérationnelles sur EC2
-Image de la stratégie de déploiement sur EC2:
-![image](https://github.com/user-attachments/assets/ac97c1fe-00f6-4a40-99a0-d673aedc2738)
+
 Résultat final :
 ![image](https://github.com/user-attachments/assets/f8cba9ed-5004-4c9f-a921-3e1307834e70)
